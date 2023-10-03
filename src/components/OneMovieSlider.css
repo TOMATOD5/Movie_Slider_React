@@ -14,7 +14,6 @@
     cursor: pointer;
 }
 
-
 .all-movies-content {
     display: flex;
     flex-direction: row;
@@ -26,7 +25,6 @@
     position: relative;
 }
 
-
 .all-movies-content article {
     position: absolute;
     top: 0;
@@ -36,7 +34,6 @@
     opacity: 0;
     transition: all 0.5s linear;
 }
-
 
 .all-movies-content img {
     width: 80%;
