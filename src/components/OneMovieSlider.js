@@ -6,7 +6,7 @@ import data from "../data"
 const OneMovieSlider = () => {
     const [index, setIndex] = useState(0)
 
-     // Filmy se ve slideru točí stále dokola
+
     useEffect( () => {
         if (index < 0){
             setIndex(data.length - 1)
@@ -15,7 +15,6 @@ const OneMovieSlider = () => {
         }
     }, [index])
 
-    // Automatické posouvání
     useEffect( () => {
         let setIntervalID = setInterval( () => {
             setIndex(index + 1)
