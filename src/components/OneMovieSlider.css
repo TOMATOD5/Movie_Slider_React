@@ -17,13 +17,13 @@
 .all-movies-content {
     display: flex;
     flex-direction: row;
-    /* border: 2px solid red; */
     width: 500px;
     overflow: hidden;
     height: 400px;
     text-align: center;
     position: relative;
 }
+
 
 .all-movies-content article {
     position: absolute;
@@ -35,7 +35,22 @@
     transition: all 0.5s linear;
 }
 
+
+article.active-slide {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .all-movies-content img {
     width: 80%;
     height: 225px;
+}
+
+article.last-slide {
+    transform: translateX(-100%);
+}
+
+
+article.next-slide {
+    transform: translateX(100%)
 }

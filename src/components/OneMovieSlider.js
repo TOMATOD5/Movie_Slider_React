@@ -3,19 +3,17 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { useState, useEffect } from "react"
 import data from "../data"
 
-
 const OneMovieSlider = () => {
     const [index, setIndex] = useState(0)
 
      // Filmy se ve slideru točí stále dokola
-     useEffect( () => {
+    useEffect( () => {
         if (index < 0){
             setIndex(data.length - 1)
         } else if (index > data.length - 1){
             setIndex(0)
         }
     }, [index])
-
 
     // Automatické posouvání
     useEffect( () => {
@@ -24,7 +22,6 @@ const OneMovieSlider = () => {
         }, 3000)
         return () => clearInterval(setIntervalID)
     }, [index])
-
 
     return <section className="all-movies">
         <div className="all-movies-content">
